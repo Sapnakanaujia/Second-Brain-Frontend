@@ -1,0 +1,132 @@
+/* AboutPage.css - basic styles to match the Figma screenshot */
+
+.about-root {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #ffeeef; /* soft pink background */
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #222;
+}
+
+/* Top-left logo */
+.about-logo {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  height: 42px;
+  z-index: 100;
+}
+
+/* Paper note (top-left rotated) */
+.about-note {
+  position: absolute;
+  left: 70px;
+  top: 48px;
+  width: 380px;
+  transform: rotate(-6deg);
+  z-index: 40;
+}
+
+/* India Gate bottom-left */
+.about-gate {
+  position: absolute;
+  left: 36px;
+  bottom: 86px;
+  width: 220px;
+  z-index: 20;
+  opacity: 0.98;
+}
+
+/* Decorative arrows */
+.about-arrow {
+  position: absolute;
+  z-index: 35;
+  opacity: 0.96;
+  pointer-events: none;
+}
+
+.about-arrow-up{
+ right: 600px;
+  top: 100px;
+  width: 150px;
+}
+.about-arrow-left{
+  left: 500px;
+  top: 300px;
+  width: 150px;
+}
+.about-arrow-right {
+  right: 200px;
+  top: 200px;
+  width: 130px;
+}
+
+.about-silhouettes {
+  padding: 50px;
+  position: absolute;
+  right: 300px;
+  top: 156px;
+  width: 550px;
+  z-index: 30;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.12));
+}
+
+.about-hero {
+  position: relative;
+  z-index: 60;
+  padding-top:525px;
+  padding-left: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.about-title {
+  max-width: 880px;
+  margin: 10 auto;
+  font-size: 30px;
+  line-height: 1.25;
+  color: #2e2e2e;
+}
+
+.about-cta {
+  background: #ee6a3f;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 24px;
+  box-shadow: 0 6px 12px rgba(238, 106, 63, 0.25);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* bottom gradient band */
+.about-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  background: linear-gradient(to top, rgba(255, 140, 120, 0.18), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+/* Responsive rules */
+@media (max-width: 1100px) {
+  .about-silhouettes { width: 420px; right: 36px; top: 160px; }
+  .about-note { width: 320px; left: 28px; top: 38px; }
+  .about-title { font-size: 28px; padding: 0 24px; }
+}
+
+@media (max-width: 720px) {
+  .about-note { display: none; }
+  .about-gate { left: 18px; bottom: 70px; width: 160px; }
+  .about-arrow { display: none; }
+  .about-silhouettes { width: 320px; right: 12px; top: 120px; }
+  .about-hero { padding-top: 200px; padding-bottom: 80px; }
+  .about-title { font-size: 22px; }
+  .about-logo { left: 12px; top: 12px; height: 36px; }
+}

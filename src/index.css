@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.contact-bg {
+  background-image: url('./assets/bg.png');
+  background-repeat: repeat;
+  background-position: left top;
+}
